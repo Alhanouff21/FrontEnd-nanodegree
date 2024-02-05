@@ -28,14 +28,14 @@ app.get('/all' ,(req,res)=>{
 
 
 // Setup Server
-const port = 8000;
+const port = 8080;
 
 app.listen(port, () => {
     console.log(`Server running on: http://localhost:${port}`);
   });
 
-// POST route
-app.post('/weatherData' , (req , res)=>{
+// POST 
+app.post('/weather' , (req , res)=>{
 
     projectData.date = req.body.date;
     projectData.temp = req.body.temp;

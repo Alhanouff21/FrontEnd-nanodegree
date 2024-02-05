@@ -8,30 +8,26 @@ let d = new Date();
 let newDate = d.getMonth() + 1 + '.' + d.getDate() + '.' + d.getFullYear();
 
 // weather data with api 
-const performAction = () => {
-    const zip = document.getElementById('zip').value;
-    const content = document.getElementById('feelings').value;
-    
-    if (zip == '' || content == ''){
-      alert("There is a missing info in ZIP or FEELINGS please fill and retry");
-    }else{
-    getData(urlbase , zip , APIkey)
-        .then(function(data){
+const performAction = async () => {
+  const zip = document.getElementById('zip').value;
+  const content = document.getElementById('feelings').value;
 
-            console.log(data)
-            const cloudsDescription = data.weather[0].description;
-            postData('/weatherData' , {temp : data.main.temp , date:newDate , content : content, clouds:cloudsDescription});
-        
-        })
-        .then(()=>{
-
-          updateUI();
-            
-        })
-        .catch(error => {
-            console.log("Error fetching data:", error);
-          });
-}}
+  if (!zip || !content) {
+    alert('There is missing information in ZIP or FEELINGS. Please fill them and retry.');
+    console.log(zip);
+    console.log(content);
+  }  else {
+    try {
+      const data = await getData(urlbase, zip, APIkey);
+      console.log(data);
+      const cloudsDescription = data.weather[0].description;
+      await postData('/weather', { temp: data.main.temp, date: newDate, content: content, clouds: cloudsDescription });
+      updateUI();
+    } catch (error) {
+      console.log('Error fetching data:', error);
+    }
+  }
+};
 
 //event listener calling
 document.getElementById('generate').addEventListener('click', performAction);
