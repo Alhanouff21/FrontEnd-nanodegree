@@ -1,0 +1,472 @@
+
+//HomePage Design
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("../image/background.jpg");
+  background-position: center 65%;
+  background-size: cover;
+  background-color: $primary-color;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: $shadow-dark;
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  font-family: $secondary-font;
+  margin-top: 5em;
+  margin-bottom: 1.5em;
+  color: $color-white;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px $shadow-dark;
+}
+.trip_link{
+  font-family: $secondary-font;
+}
+.content a {
+  color: $color-black;
+  display: block;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin: 0 10px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background: $color-white;
+  border: 2px solid $color-white;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 20px $shadow-dark;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: $color-white;
+  background: $shadow-dark
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+section h2 {
+  font-size: 2rem;
+}
+
+section > p {
+  text-align: center;
+}
+
+//Form Design
+.container {
+  align-items: center;
+  font-family: $secondary-font;
+  border-radius: 0.5rem;
+  background-color: $color-white;
+  box-shadow: 1rem 1rem 2rem $shadow-dark;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.form_travel {
+  align-content: flex-start;
+  justify-content: baseline;
+
+  @media only screen and (min-width: 576px) {
+    width: 90%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin: 0 2rem;
+    padding: 1rem 0;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin: 0 4rem;
+  }
+
+  .form__title {
+    font-size:8px;
+    text-transform: uppercase;
+
+
+    @media only screen and (min-width: 350px) {
+      font-size: 6vw;
+      padding-top: 1rem;
+    }
+
+    @media only screen and (min-width: 576px) {
+      font-size: 4vw;
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 5vw;
+      padding: 2rem 0 0.5rem 0;
+      text-align: left;
+    }
+
+    @media only screen and (min-width: 992px) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .input {
+    border: 0.1rem solid $shadow-dark;
+    color: $color-dark;
+    font-size: 8px;
+    background: $shadow-light;
+    line-height: 2;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.3rem;
+    text-transform: capitalize;
+
+    @media only screen and (min-width: 350px) {
+      font-size: 0.6rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .label_D {
+    color: $color-black;
+    font-size: 8px;
+    opacity: 0.8;
+    padding-top: 1rem;
+    text-align: right;
+    margin-left: 10em;
+
+    @media only screen and (min-width: 350px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .date_input {
+    background: $shadow-light;
+    border: 0.1rem solid $shadow-dark;
+    height: 100%;
+    font-size: 1rem;
+    outline: none;
+    padding: 0.3rem;
+    text-align: left;
+
+    @media only screen and (min-width: 350px) {
+      font-size: 0.8rem;
+      
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 0.5rem 0.3rem;
+    }
+
+    @media only screen and (min-width: 992px) {
+      padding: 1rem 0.3rem;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .submit {
+    border: $color-dark 0.1rem solid;
+    color: $color-dark;
+    font-size: 0.85rem;
+    margin: 2rem 0 2rem 0;
+    opacity: 0.8;
+    padding: 0.4em 0.2em;
+
+    @media only screen and (min-width: 350px) {
+      margin-bottom: 1rem;
+      font-size: 0.7rem;
+      padding: 0.1rem;
+    }
+
+    @media only screen and (min-width: 576px) {
+      margin-bottom: 1.5rem;
+    }
+
+    @media only screen and (min-width: 768px) {
+      padding: 0.6em 0.4em;
+      font-size: 1.5em;
+    }
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: $shadow-dark;
+  
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+ //Result Section 
+ .image_result {
+  height: 20rem;
+  margin: 7rem 0;
+  border-radius: 20%;
+  overflow: hidden;
+  width: 27rem;
+  display: flex;
+  justify-content: end;
+  object-fit: cover;
+  padding: 1em;
+}
+
+.container_result {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-light-trans;
+  margin-top: 2.5em;
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid $color-light;
+  box-shadow: 0 0 5px $color-light;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: darken($color-light, 10%);
+    box-shadow: 0 0 10px $color-light;
+  }
+}
+
+.result_div {
+  padding: 2.5em;
+
+  .result_txt {
+    grid-column: 2/4;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  span {
+    text-transform: capitalize;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+.button {
+  color: $color-dark;
+  font-size: 0.7rem;
+  display: inline-flex;
+  width: 10vw;
+  opacity: 0.9;
+  padding: 0.5rem 0;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+
+  @media only screen and (min-width: 576px) {
+    padding: 0.6rem 0;
+  }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    padding: 0.8rem 0;
+  }
+
+  @media only screen and (min-width: 992px) {
+    margin-top: 1rem;
+  }
+}
+
+.btn_export {
+  background: $shadow-dark;
+  grid-column: 2/3;
+  grid-row: 5/6;
+  padding-left: 4em;
+}
+
+.btn_delete {
+  background: $primary-color;
+  grid-column: 3/4;
+  grid-row: 5/6;
+  padding-left: 4em;
+}
+
+#export:hover {
+  box-shadow: 0.5rem 0 1rem $shadow-light;
+  opacity: 1;
+  transform: translateY(-0.2rem);
+}
+
+#delete:hover {
+  box-shadow: 0.5rem 0 1rem $shadow-light;
+  opacity: 1;
+  transform: translateY(-0.2rem);
+}
+
+@media only screen and (max-width: 576px) {
+  .image_result {
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+    border-radius: 10%;
+  }
+
+  .container_result {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .result_div {
+    padding: 1rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .btn_export,
+  .btn_delete {
+    grid-column: auto;
+    grid-row: auto;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+
+//Cards 
+.more h2{
+  margin-top: 0.5em;
+  font-family: $secondary-font;
+
+}
+
+.more .card img {
+  width: 100%;
+  padding-bottom: 20px;
+  object-fit: cover;
+  border-radius: 7px;
+  transition: transform 0.3s ease; 
+}
+
+
+.more .card p {
+  padding: 0 10px;
+  margin-top: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  font-family: $primary-font;
+}
+.more .card:hover p {
+  opacity: 1; 
+}
+.more .card {
+  background: $color-white;
+  font-family: $primary-font;
+  padding: 40px 10px;
+  list-style: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px $shadow-dark;
+  margin-bottom: 40px;
+  width: calc(100% / 3 - 30px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.more .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $shadow-light;
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.more .card:hover img {
+  transform: scale(1.1); 
+}
+
+.more .card:hover::before {
+  opacity: 1; 
+}
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 860px) {
+  
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+  .content a {
+    font-size: 17px;
+    padding: 9px 20px;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

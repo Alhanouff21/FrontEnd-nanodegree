@@ -1,0 +1,73 @@
+@import "values";
+@import "header";
+@import "footer";
+@import "reset";
+@import "section";
+
+//To Do SCSS HERE !!!
+#tripInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid $color-dark;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: $shadow-dark;
+  }
+  #Trip-heading{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  #addTripTDButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #addTripTDButton:hover {
+    background-color: #45a049;
+  }
+  
+
+  #tripList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #tripList li {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-family: $primary-font;
+  }
+  
+  #tripList li:last-child {
+    margin-bottom: 0;
+  }
+  
+
+  #tripList li.completed {
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+  
+  #deleteTripTDButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff3333;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;  }
+  
+  #deleteTaskButton:hover {
+    background-color: #e60000;
+
+  }

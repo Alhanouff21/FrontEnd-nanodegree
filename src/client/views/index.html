@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Destination Discovery</title>
+</head>
+
+<body>
+  <!-- Header start here!! -->
+  <header>
+    <nav class="navbar">
+      <h2 class="logo"><a href="#">DD</a></h2>
+      <ul class="all-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#more">Recommendation </a></li>
+        <li><a href="#Trip-heading">Trip List</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- Header end here!!-->
+
+    <!-- homepage & form start here!!-->
+  <section class="homepage" id="home">
+    <div class="content">
+      <div class="text">
+        <h1>Destination Discovery</h1>
+        <p>
+          Do you want to travel and exlore new places? <br>You can plan you trips easily and write your trip list</p>
+      </div>
+      <a href="#" class="trip_link">add trip now</a>    
+      <section>
+        <div >
+          <div class="container planner__form " id="planner">
+            <form class="form_travel" id="form">
+              <h2 class="form__title">Plan your trip here &#9829;</h2>
+              <input type="text" class="input input__from" name="from" placeholder="leaving from..."
+                autocomplete="off" required>
+              <input type="text" class="input input__to" name="to" placeholder="going to..." autocomplete="off"
+                required>
+              <label class="label_D" for="date">departing on...</label>
+              <input type="date" class="input date_input" name="date" required>
+              <input type="submit" class="submit" name="submit" value="Submit">
+            </form>
+          </div>
+         </section>
+    </div>
+    <!-- homepage & form end here!!-->
+
+     <!-- result section start here!!-->
+    <section id="result" class="invisible">
+      <div class="container_result results">
+        <div class="image_result">
+          <img src=""  alt="destination img" id="fromPixabay">
+         </div>  
+        <div class="result_div">    
+          <i class="city__icon icon__result fas fa-map-pin"></i>
+          <h2 class="city__name result_txt">You are going to: <span id="city"></span></h2>
+          <h2 >the country:<span id="country"></span></h2>
+          <h2 >capital: <span id="capital"></span></h2>
+          <h2 >number of population:<span id="population"></span></h2>
+          <i class="date__icon icon__result fas fa-calendar-day"></i>
+          <h2 class="date__name result_txt">Departing on: <span id="date">DD/MM/YYYY</span></h2>
+
+          <i class="days__icon icon__result fas fa-suitcase-rolling"></i>
+          <h2 class="days__name result_txt">This is <span id="days"> NUM </span> days away</h2>
+
+          <i class="weather__icon icon__result fas fa-cloud-sun-rain"></i>
+          <h2 class="weather__name result_txt">Expect weather to be: <span id="temp">200</span></h2>
+          <a class="button btn_export" id="export" href="#">Export</a>
+          <a class="button btn_delete" id="delete" href="#">Delete</a>
+        </div>
+       
+      </div>
+    </section>
+    <!-- result section end here!!-->
+
+  
+   <!-- Recommendation section start here!!-->
+    <section class="more" id="more">
+      <h2>Our Recommendation Places </h2>
+      <ul class="cards">
+        <li class="card">
+          <img src="../image/France.jpg"  alt="Paris city photo">
+          <h3>France, Paris</h3>
+          <p>Paris is a captivating city known for its historical landmarks, artistic treasures, and romantic ambiance.</p>
+        </li>
+        <li class="card">
+          <img src="../image/Athens.jpg" alt="Greek city photo">
+          <h3>Athens, Greece</h3>
+          <p>Greek refers to the ancient civilization of Greece, renowned for its contributions to philosophy, democracy, literature, and art, and its lasting influence on Western civilization.</p>
+        </li>
+        <li class="card">
+          <img src="../image/Barcelona.jpg" alt="Barcelona city photo">
+          <h3>Barcelona, Spain</h3>
+          <p>Barcelona, Spain is particularly renowned for its vibrant and unique architecture, exemplified by the extraordinary creations of Antoni Gaudí, such as the iconic Sagrada Família and Park Güell.</p>
+        </li>
+      </ul>
+    </section>
+   <!-- Recommendation section end here!!-->
+
+    
+<!-- Trip List start here!!-->
+    <h1 id="Trip-heading">Trip List</h1>
+     <input type="text" id="tripInput" placeholder="Enter Trip List Item Here and click on it to remove it">
+       <button id="addTripTDButton">Add +</button>
+       <button id="deleteTripTDButton">delete All -</button>
+     <ul id="tripList">
+
+     </ul>
+  <!-- Trip List end here!!-->
+
+
+<!-- Footer start here!!-->
+    <footer>
+      <div>
+        <span>Udacity Final Project</span>
+        <span>
+            <a href="#">Hope You Like it, Click here to go up </a>
+        </span>
+      </div>
+    </footer>
+<!-- Footer end here!!-->
+
+  </section>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+  </script>
+</body>
+
+</html>

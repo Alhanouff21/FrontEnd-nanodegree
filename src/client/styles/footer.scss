@@ -1,0 +1,24 @@
+//Footer
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: $color-black;
+    padding: 20px 0;
+  }
+  
+  footer div {
+    padding: 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer span {
+    color: $color-white;
+  }
+  
+  footer a {
+    padding: 0;
+  }
