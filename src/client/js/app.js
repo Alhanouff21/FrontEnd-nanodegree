@@ -150,3 +150,8 @@ async function updateUI(userData) {
     console.log('error', error);
   }
 }}
+
+
+module.exports = {
+  addTrip, 
+};

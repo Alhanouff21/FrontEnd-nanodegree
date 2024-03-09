@@ -49,3 +49,8 @@ const server = app.listen(port, listening);
 
 function listening() {
   console.log(`running on localhost:${port}`);}
+
+  module.exports = {
+    app,
+    addInfo,
+  };
